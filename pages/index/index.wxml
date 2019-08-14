@@ -1,0 +1,18 @@
+<!--index.wxml-->
+<view >
+<button  open-type='contact'  type="default" style="border:none;"><image src='images/banner.png' style='width:100%;height:80rpx;'></image></button>
+  <view class='m-top'></view>
+  <view class='m-list' wx:for="{{arr}}" wx:key="key">{{item.name}}
+    <view class='m-text'>
+      <image src='{{amount}}'></image>题量
+      {{item.complete}} / {{item.count}}    <image src='{{correct}}'></image>正确率 {{item.rightround}}% 
+    </view>
+    <button type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}"
+          disabled="{{disabled}}" catchtap="primary" data-index="{{item.qtypeid}}"> 练习 </button>
+  </view>
+
+  <view class='m-tab-title' style='margin-top:20rpx;'>
+    <view bindtap="collection"><image src='images/collection.png'></image><text>收藏 {{collectcount}}</text></view>
+    <view bindtap="error"><image src='images/error.png'></image><text>错题集 {{errorcount}}</text></view>
+  </view><text></text>
+</view>

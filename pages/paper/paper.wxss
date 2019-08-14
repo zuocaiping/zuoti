@@ -1,0 +1,90 @@
+page{padding-bottom: 150rpx;}
+.log-list {
+  flex-direction: column;
+  padding: 20rpx 40rpx 40rpx 40rpx;
+  color: #333;
+  font-size: 36rpx; line-height: 60rpx;
+word-wrap:break-word;
+}
+.container{position: relative; }
+.container text{display: inline-block; text-indent: 4em;}
+.container text.questions{ position:absolute; text-indent: 0;left:40rpx;top:20rpx;color: #1fbba6;font-weight: bold; }
+.option-list{font-size: 18px; line-height: 58rpx;padding:12rpx 26rpx 12rpx 120rpx;margin-bottom:26rpx; position: relative;word-wrap:break-word}
+.log-item {
+  margin: 10rpx;
+}
+.paper-title{padding:0 40rpx;font-size:26rpx; overflow: hidden; }
+.paper-title .txt{ float: left;color: #aaaaaa;font-size: 30rpx;}
+.paper-title .time{ float: right;color: #aaaaaa;}
+.class_select{color: #3bb295;}
+.class_select .choice-item-ico{border:1rpx solid #3bb295;}
+.class_answer{color: #d33131;}
+.class_answer .choice-item-ico{border:1rpx solid #d33131;}
+.other-button-hover{background: #3bb295;margin:20px 5% 0; text-align: center; line-height: 46px;border-radius: 5px;color: #fff;}
+.choice-item-ico{ position: absolute; left:40rpx;display: inline-block;border: 1px solid #333;width: 1.5rem;height: 1.5rem; line-height:1.5rem;border-radius: 50%; text-align: center;}
+.testbtn-container{margin: 60rpx 3% 20rpx;  }
+
+.m-time{ background: #f3f3f3;border-radius: 15rpx; display: flex;margin:30rpx 0 60rpx;  overflow: hidden; padding:20rpx 0;}
+.m-time view{flex: 3; text-align: center;font-size: 28rpx; line-height: 50rpx;}
+.m-time text{display: block;color: #333333;}
+.m-analysis{border-top:1px solid #eaeaea;margin:60rpx 32rpx;padding-top:60rpx;font-size: 36rpx;color: #666;}
+.u-bold{font-weight: bold;color: #333;font-size: 32rpx; display: block;margin:40rpx 0;}
+.m-answer{margin-top:38rpx; }
+.m-analysis .red{color: #e46a6a;}
+.m-analysis .green{color: #1fbba6;}
+.m-card .btn{background: #1fbba6;height: 88rpx; line-height: 88rpx;font-size: 32rpx; color: #fff; text-align: center; display: block;margin: 0 40rpx;border-radius: 10rpx;}
+.m-submit{padding:30rpx 0;}
+
+.analysis-item {
+  padding: 0 40rpx;
+  margin-bottom: 50rpx;
+  align-items: center;
+}
+
+.analysis-item .title {
+  border-left: 4px solid #050001;
+  text-indent: 14rpx;
+  font-size: 40rpx;
+  height: 34rpx;
+  line-height: 1;
+  font-family: '黑体', serif;
+  color: #1a1a1a;
+  font-weight: bold;
+}
+
+.analysis-item .small-tit {
+  font-size: 30rpx;
+  line-height: 34rpx;
+  font-weight: normal;
+  color: gray;
+  font-family: '黑体', serif;
+}
+
+.analysis-item .con {
+  margin-top: 50rpx;
+  line-height: 64rpx;
+  font-size: 40rpx;
+  color: #414141;
+  text-align: justify;
+}
+
+.m-text-btn{margin: 20rpx 40rpx;border: 1px solid #fff;}
+.m-text-btn button{border:1px solid #fff;background: none;color: #159f8c; clear: both;}
+.m-submie-block{background: #fff; position: fixed;width: 100%;height: 150rpx;left:0;bottom:0;border-top:1px solid #eee; z-index: 1000;}
+.m-tab-title{ height: 90rpx;background: #fff; display: flex; position: fixed;width: 100%;bottom:0;left:0;border-top:1px solid #e7e7e7;box-shadow: 10rpx 10rpx 10rpx 10rpx #888888;font-size: 28rpx; color: #ababab; line-height: 90rpx}
+.m-tab-title view{flex: 1;text-align: center;border-right:1px solid #e7e7e7;margin-right:-1px; }
+.m-tab-title image{width: 82rpx;height: 82rpx;margin-top: 0rpx; vertical-align: top;}
+.m-tab-title text{display: inline-block;font-size: 32rpx; color: red; line-height: 90rpx;font-weight: bold;}
+
+.m-tab{  margin-bottom:26rpx;background: #fff;border-bottom:1px solid #e7e7e7; display: flex; height: 70rpx; line-height: 70rpx; text-align: center;font-size: 32rpx; color: #666;}
+.m-tab text{ flex: 1;}
+
+.m-tab text.hover{color: #000;border-bottom: 1px solid #333;margin-bottom:-1px;}
+.m-box{ position: fixed;z-index: 100;background: #fff;border-radius: 5rpx;top:10%;padding:30rpx;width: 80%;left:50%;margin-left: -44%;}
+.m-box .title{ text-align: center;color: #000;font-size: 42rpx;margin-bottom:20rpx;}
+.m-box-btn{border-top:2px solid #f4f4f5;margin-top:40rpx;}
+.m-box-btn{ display: flex;}
+.m-box-btn .m-btn{flex:1;font-size: 40rpx;color: #4eca33; display: block; text-align: center; line-height: 120rpx;}
+.m-Mask{background: #000;width: 100%;height: 100%; position: fixed;left:0;top:0;z-index: 99;opacity:0.5;}
+.m-conter{padding:20rpx 0;}
+.m-conter text{display: block; line-height:56rpx;margin-bottom:30rpx;font-size: 32rpx;}

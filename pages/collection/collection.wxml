@@ -1,0 +1,84 @@
+<!--logs.wxml-->
+<view class='m-tab'><text bindtap="selected" class="{{selected?'hover':'hidden'}}">答题模式</text><text bindtap="selected1" class="{{selected1?'hover':'hidden'}}">背题模式</text></view>
+
+<view data-index="{{passnum}}" bindtouchstart="touchStart" bindtouchend="touchEnd" wx:if="{{_ishide == true}}">
+  <view class="paper-title">
+    <text class="txt">第{{e+1}}题 {{arr_list[e].qtypet}} </text>
+    <text class="time">{{e+1}}/{{count}}</text>
+  </view>
+  <view class="container log-list">
+    <text class="questions">[单选]</text>
+    <content content="{{arr_list[e].body}}"></content>
+  </view>
+  <!--选项-->
+  <view wx:key="un" bindtap="option" data-option="A" data-int="0" data-answer="{{arr_list[e].answer}}" class="option-list  {{arr_list[e].arr_class[0].name}}">
+    <view class="choice-item-ico" data-index='{{index}}'>A</view>
+    <content content="{{arr_list[e].A}}"></content>
+  </view>
+  <view wx:key="un" bindtap="option" data-option="B" data-int="1" data-answer="{{arr_list[e].answer}}" class="option-list {{arr_list[e].arr_class[1].name}}">
+    <view class="choice-item-ico" data-index='{{index}}'>B</view>
+    <content content="{{arr_list[e].B}}"></content>
+  </view>
+  <view wx:key="un" bindtap="option" data-option="C" data-int="2" data-answer="{{arr_list[e].answer}}" class="option-list {{arr_list[e].arr_class[2].name}}">
+    <view class="choice-item-ico" data-index='{{index}}'>C</view>
+    <content content="{{arr_list[e].C}}"></content>
+  </view>
+  <view wx:key="un" bindtap="option" data-option="D" data-int="3" data-answer="{{arr_list[e].answer}}" class="option-list  {{arr_list[e].arr_class[3].name}}">
+    <view class="choice-item-ico" data-index='{{index}}'>D</view>
+    <content content="{{arr_list[e].D}}"></content>
+  </view>
+
+
+  <view class="m-analysis" style='display:{{show}}'>
+    <view class="red" wx:if="{{answer == 0}}"> 回答错误： </view>
+    <view class="green" wx:elif="{{answer == 1}}"> 回答正确： </view>
+    <view class="m-answer">正确答案：
+      <text class="green">{{arr_list[e].answer}}</text></view>
+  </view>
+
+  <view class="m-card m-submit" wx:if="{{seeResult!=''}}">
+    <view class='btn' catchtap='seeResult'>查看结果</view>
+  </view>
+  <view wx:if="{{analysis!=''}}">
+    <view class="analysis-item">
+      <view class="title ">
+        <text>解析详情</text>
+      </view>
+      <view class="con ">
+        <content content="{{arr_list[e].description}}"></content>
+      </view>
+    </view>
+    <view class="analysis-item" wx:if="{{arr_list[e].expend != ''}}">
+      <view class="title ">
+        <text>知识拓展</text>
+      </view>
+      <view class="con ">
+        <content content="{{arr_list[e].expend}}"></content>
+
+      </view>
+    </view>
+  </view>
+<view class='m-tab-title' style='margin-top:20rpx;'>
+  <view bindtap="collection" style="background:#f1f1f1;"><image src='{{arr_list[e].collection_img}}'></image>收藏</view>
+  <view bindtap="error"><image src='images/error.png'></image>错题(<text>{{errorcount}}</text>)</view>
+</view>
+</view>
+
+<view class='m-box m-follow' wx:if="{{box != 0 }}">
+<view class='m-conter'>
+<text style='color:#1fbba6;'>做的不过瘾？下载“公考摇题啊”上万优质试题免费做,还有神秘大奖拿哦！</text>
+<text>— 每周六上午九点报名APP模考大赛，就可瓜分100万现金红包，详情请关注“公考摇题啊”公众号</text>
+<text>— 2018联考职位搜索、考试时间一键查询</text>
+<text>— 公考大咖7天速成特训课[免费]</text>
+<view class='m-box-btn'>
+  <view class="m-text-btn m-btn" style='margin-bottom:10rpx;' wx:if="{{issubscribe == ''}}">
+      <button class='btn' open-type='contact'  type="default" >关注公众号</button>
+  </view>
+  <view class='m-btn' bindtap="clickClose">我知道了</view>
+</view>
+</view>
+</view>
+
+<view class='m-Mask' wx:if="{{box != 0 }}"></view>
+<view class="m-prompt" wx:if="{{arr_list == '' }}">你还没有收藏题目哦^_^!</view>
+

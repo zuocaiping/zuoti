@@ -1,0 +1,5 @@
+.imgincontent{max-width: 100%;}
+.content-text{display: inline;}
+.image-loading{display: block;width: 100%; text-align: center;background-color: #eaeaea;margin-bottom: 10rpx;}
+.image-loading image{width: 200rpx;height: 200rpx;}
+.math-loading{ width: 40rpx; height: 40rpx;vertical-align: middle}

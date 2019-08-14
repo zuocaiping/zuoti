@@ -1,0 +1,52 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.1",
+	"appid": "wxef8159e9b03ddc83",
+	"projectname": "%E5%85%AC%E5%8A%A1%E5%91%98%E8%80%83%E8%AF%95%E5%8E%86%E5%B9%B4%E7%9C%9F%E9%A2%98",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "做题",
+					"pathName": "pages/paper/paper",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "错题集",
+					"pathName": "pages/error/error",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "111",
+					"pathName": "pages/collection/collection",
+					"query": ""
+				}
+			]
+		}
+	}
+}
